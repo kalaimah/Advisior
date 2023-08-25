@@ -1,0 +1,17 @@
+.my-custom-scrollbar {
+    position: relative;
+    height: 300px;
+    overflow: auto;
+    }
+    .table-wrapper-scroll-y {
+    display: block;
+    }
+    .center-table {
+        margin: 0 auto; /* This will horizontally center the element */
+      }
+      .table{
+        border-spacing: 10px;
+      }
+      .col-color{
+        background-color  : rgb(153, 157, 161);
+      }

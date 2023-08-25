@@ -1,0 +1,73 @@
+.demographics-text{
+  font-size: 30px;
+  font-weight: 600;
+}
+.input-box {
+  border-color: rgb(195, 234, 244);
+  background-color: #cdd2d6;
+  border: none;
+  height: 50px;
+  width: 650px;
+}
+
+.button-add-new-child{
+  width:50px;
+  height: 50px;
+}
+.text{
+  font-size: 22px;
+  font-weight: bold;
+  vertical-align: middle;
+  line-height: 25px;
+  
+}
+.error {
+  color: #dc3545;
+  font-size: 16px;
+}
+  .radio-texts{
+    font-size: 20px;
+  }
+  .check-box{
+    font-size: 20px;
+  }
+  .go-to-snapshot{
+ 
+    width: 200px;
+    height: 45px;
+    background-color: #0070ad;
+    border: 1px solid #4262ff; 
+    border-radius: 12px;
+    color: white;
+    font-size: 20px;
+
+}
+.back-to-summary{
+  width: 200px;
+  height: 45px;
+  background-color: #0070ad;
+  border: 1px solid #4262ff; 
+  border-radius: 12px;
+  color: white;
+  font-size: 20px;
+}
+
+.add-icon::before{
+  content: '\2b';
+  font-size: 25px;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  color: black;
+}
+.trash-icon::after{
+  content: '\f5de';
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+.button-remove-child{
+  /* width:100px; */
+  height: 50px;
+
+}

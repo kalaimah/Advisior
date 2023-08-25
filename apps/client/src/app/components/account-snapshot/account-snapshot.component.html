@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="snapshot-heading">Here's your Snapshot!!</div>
+  <nav class="nav nav-pills flex-column flex-sm-row nav-fill">
+    <a class="flex-sm-fill text-sm-center nav-link " routerLink="financial-success"  routerLinkActive="activeTab">{{'FINANCIAL_SUCCESS_TAB_HEADER' | content | async }}</a>
+    <a class="flex-sm-fill text-sm-center nav-link " routerLink="goal"  routerLinkActive="activeTab" >{{'GOAL_TAB_HEADER' | content | async }}</a>
+    <a class="flex-sm-fill text-sm-center nav-link " routerLink="glide-path"  routerLinkActive="activeTab">{{'GLIDE_PATH_TAB_HEADER' | content | async }}</a>
+    <a class="flex-sm-fill text-sm-center nav-link " routerLink="cash-flow"  routerLinkActive="activeTab">{{'CASH_FLOW_TAB_HEADER' | content | async }}</a>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>
+

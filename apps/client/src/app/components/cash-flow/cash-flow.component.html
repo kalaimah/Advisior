@@ -1,0 +1,23 @@
+<div class="container shadow p-3 mb-5 bg-white rounded">
+    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+        <table class="table table-bordered  mb-0 center-table ">
+          <thead>
+            <tr>
+              <th class="col-color">CashFlow</th>
+              <th class="col-color" scope="col">Inflow</th>
+              <th class="col-color" scope="col">Outflow</th>
+              <th class="col-color" scope="col">Total Corpus</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of cashflowData">
+          <td>{{item.cashflow}}</td>
+          <td>{{item.inflow}}</td>
+          <td>{{item.outflow}}</td>
+          <td>{{item.Totalcorpus}}</td>
+            </tr>
+          </tbody>
+        </table>
+      <p></p>
+      </div>
+    </div>

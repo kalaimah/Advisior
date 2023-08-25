@@ -1,0 +1,43 @@
+.welcome{
+  font-size: 25px;
+  line-height:30px;
+  letter-spacing: 1px;
+}
+.bold-text{
+  font-size: 25px;
+  font-weight: 500;
+  line-height:30px;
+  letter-spacing: 0.5px;
+}
+.fetch-ssn{
+  font-size: 22px;
+  line-height:55px;
+  letter-spacing: 1px;
+}
+.snn-validation{
+  font-size: 15px;
+}
+.fetch-my-details{
+    height: 40px;
+    width: 260px;
+    background-color: #0070ad;
+    border: 1px solid #4262ff;
+   justify-content: center;
+   line-height: 20px;
+   letter-spacing: 1px;
+}
+.go-back-to-home-page{
+  height: 40px;
+    width: 260px;
+    background-color: #0070ad;
+    border: 1px solid #4262ff;
+   line-height: 20px;
+   letter-spacing: 1px;
+}
+input::placeholder {
+  font: 1.25rem/3 sans-serif;
+}
+.image-insert{
+  width: 60px;
+  height: 60px;
+}

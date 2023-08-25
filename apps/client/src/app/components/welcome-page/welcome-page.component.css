@@ -1,0 +1,53 @@
+.information {
+    height: 571px;
+    width: 440px;
+  }
+  .text-1 {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 32px;
+    font-family: Inter;
+    letter-spacing: -1px;
+    line-height: 56px;
+    color: #050038;
+  }
+  .text-2, .text-3 {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 22px;
+    font-family: Open Sans;
+    line-height:30px;
+    letter-spacing: 2px;
+    color: rgba(5, 0, 56, 0.7200000286102295);
+  }
+  .get-started-button-div {
+    height: 109px;
+    width: 440px;
+    cursor: pointer;
+  }
+  .get-started-button {
+    border-radius: 32px;
+    height: 51px;
+    width: 440px;
+    background-color: #0070ad;
+    border: 1px solid #4262ff;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  .text-4 {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20px;
+    font-size: 25px;
+    font-family: Open Sans;
+    color: #ffffff;
+  }
+
+  .question-img {
+    float: right;
+  }
+
+  .question-mark-div {
+    width: 112%;
+  }

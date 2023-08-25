@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="text-center welcome">
+    <span class="bold-text">Hi Sarah, </span>
+    {{ 'GET_STARTED_SCREEN_TEXT1' | content | async }}
+  </div>
+  <div class="text-center fetch-ssn">
+    {{ 'GET_STARTED_SCREEN_TEXT2' | content | async }}
+    <div class="text-center">
+      {{ 'GET_STARTED_SCREEN_TEXT3' | content | async }}
+    </div>
+    <div class="row form-row  col-form-label ">
+      <form [formGroup]="ssnForm" (ngSubmit)="formSubmit()" role="form">
+        <input
+          type="text"
+          id="ssnName"
+          formControlName="ssnName"
+          maxlength="11"
+          mask="000-00-0000"
+          placeholder=" Enter your SSN.. "
+        />
+        
+        <div
+          class="snn-validation"
+          *ngIf="ssnName?.invalid && (ssnName?.touched || ssnName?.dirty)"
+          style="text-align: center; color: red"
+        >
+          <div *ngIf="ssnName?.errors?.['required']">SSN is required</div>
+          <div *ngIf="ssnName?.errors?.['minlength']">
+            SSN Should be 8 Digits
+          </div>
+          <div *ngIf="ssnName?.errors?.['maxlength']">
+            SSN Should be 8 Digits
+          </div>
+          <div *ngIf="ssnName?.errors?.['incorrect']">
+            SSN not found
+          </div>
+        </div>
+      
+      <div class="text-center p-4">
+      
+        <button 
+          [disabled]="!ssnForm.valid"
+          class="btn btn-primary rounded-pill fetch-my-details "
+          routerLink="/summary"
+
+        >
+          {{ 'GET_STARTED_SCREEN_TEXT4' | content | async }}
+        </button>
+      </div>
+    </form>
+    </div>
+    
+    
+    <div class="row">
+      <div class="col-md-2">
+        <button
+          class="btn btn-primary rounded-pill go-back-to-home-page"
+          routerLink="/welcome"
+        >
+          {{ 'GET_STARTED_SCREEN_TEXT5' | content | async }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

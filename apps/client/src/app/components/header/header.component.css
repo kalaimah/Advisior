@@ -1,0 +1,27 @@
+
+.img-company {
+  height: 90px;
+  width: 239px;
+}
+
+.img-robo {
+  height: 70px;
+  width: 50px;
+}
+
+.img-2 {
+  height: 40px;
+  width: 20px;
+}
+
+.header-start-button {
+  
+  background-color: #0070ad;
+  border-radius: 50px;
+  color:#ffffff;color: #FFF;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 100% */
+}

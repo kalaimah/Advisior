@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+      <div class="col-5">
+          <div class="information">
+              <p class="text-1">{{ 'WELCOME_SCREEN_TEXT1' | content | async }} Sarah!</p>
+              <p class="text-2">{{ 'WELCOME_SCREEN_TEXT2' | content | async }}</p>
+              <p class="text-3">{{ 'WELCOME_SCREEN_TEXT3' | content | async }}</p>
+              <div class="get-started-button-div">
+                <div class="get-started-button" routerLink="/start">
+                  <p class="text-4" >{{ 'WELCOME_SCREEN_TEXT4' | content | async }}</p>
+                </div>
+              </div>
+            </div>
+      </div>
+      <div class="col-7">
+          <img src="assets/images/welcome-image.svg" />
+          <div class="question-mark-div">
+            <img class="question-img" src="assets/images/question-mark-image.svg" />
+          </div>
+      </div>
+  </div>
+</div>

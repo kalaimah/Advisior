@@ -1,0 +1,220 @@
+<div class="summary-page">
+    <p class="summary-text">{{ 'SUMMARY_PAGE_TEXT1' | content | async }}</p>
+    <div class="accordion" id="account-summary-accordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="cash-heading">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <div class="accordion-btn-content">
+                        <img class="accordion-img" src="assets/images/cash-image.svg" />
+                        <span>{{ constant.cash }}</span>
+                        <span class="amount-text">${{ totalCash }}</span>
+                    </div>
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="cash"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="cash-data-table">
+                        <table class="table table-borderless shadow-sm">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Firm</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of cashData">
+                                    <td class="type-col">{{ data.type }}</td>
+                                    <td class="firm-col">{{ data.firm }}</td>
+                                    <td>{{ data.amount }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="investments-heading">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <div class="accordion-btn-content">
+                        <img class="accordion-img" src="assets/images/investment-image.svg" />
+                        <span>{{ constant.investments }}</span>
+                        <span class="amount-text">${{ totalInvestment }}</span>
+                    </div>
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="investments"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="investment-data-table">
+                        <table class="table table-borderless shadow-sm">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Firm</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of investmentData">
+                                    <td class="type-col">{{ data.type }}</td>
+                                    <td class="firm-col">{{ data.firm }}</td>
+                                    <td>{{ data.amount }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="credit-heading">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <div class="accordion-btn-content">
+                        <img class="accordion-img" src="assets/images/credit-image.svg" />
+                        <span>{{ constant.credit }}</span>
+                        <span class="amount-text">${{ totalCredit }}</span>
+                    </div>
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="credit"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="credit-data-table">
+                        <table class="table table-borderless shadow-sm">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Firm</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of creditData">
+                                    <td class="type-col">{{ data.type }}</td>
+                                    <td class="firm-col">{{ data.firm }}</td>
+                                    <td>{{ data.amount }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="loans-heading">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <div class="accordion-btn-content">
+                        <img class="accordion-img" src="assets/images/loan-image.svg" />
+                        <span>{{ constant.loans }}</span>
+                        <span class="amount-text">${{ totalLoan }}</span>
+                    </div>
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="loans"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="loans-data-table">
+                        <table class="table table-borderless shadow-sm">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Firm</th>
+                                    <th>Outstanding Amount</th>
+                                    <th>Remaining Tenure</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of loansData">
+                                    <td class="loan-type-col">{{ data.type }}</td>
+                                    <td class="loan-firm-col">{{ data.firm }}</td>
+                                    <td class="loan-amount-col">{{ data.outstanding_amount }}</td>
+                                    <td>{{ data.remaining_tenure_months }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="insurance-heading">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <div class="accordion-btn-content">
+                        <img class="accordion-img" src="assets/images/insurance-image.svg" />
+                        <span>{{ constant.insurance }}</span>
+                        <span class="amount-text">${{ totalInsurance }}</span>
+                    </div>
+                </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="insurance"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="insurance-data-table">
+                        <table class="table table-borderless shadow-sm">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Firm</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of insuranceData">
+                                    <td class="type-col">{{ data.type }}</td>
+                                    <td class="firm-col">{{ data.firm }}</td>
+                                    <td>{{ data.amount }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="other-assets-heading">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    <div class="accordion-btn-content">
+                        <img class="accordion-img" src="assets/images/other-assets-image.svg" />
+                        <span>{{ constant.otherAssets }}</span>
+                        <span class="amount-text">${{ totalOtherAssets }}</span>
+                    </div>
+                </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="otherAssets"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="other-assets-data-table">
+                        <table class="table table-borderless shadow-sm">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Firm</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of otherAssetsData">
+                                    <td class="type-col">{{ data.type }}</td>
+                                    <td>{{ data.firm }}</td>
+                                    <td>{{ data.amount }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="summary-next-btn-div">
+        <button class="summary-next-btn" routerLink="/demographics">{{ constant.next }}</button>
+    </div>
+</div>

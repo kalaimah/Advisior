@@ -1,0 +1,27 @@
+<div class="container financial-success-content">
+    <p class="financial-success-text">Your financial success is at</p>
+    <div class="progress">
+        <div class="progress-bar" 
+        role="progressbar" 
+        [style.width.%]="progressValue"
+        [attr.aria-valuenow]="progressValue"
+        aria-valuemin="0"
+        aria-valuemax="100">{{ progressValue }}%</div>
+    </div>
+    <div class="progress-bar-text">
+            <span>{{ 'FINANCIAL_SUCCESS_PAGE_TEXT2' | content | async }} </span>
+            <span>{{ calculatedAmount }} </span> 
+            <span>{{ 'FINANCIAL_SUCCESS_PAGE_TEXT3' | content | async }}</span>
+    </div>
+    <div class="pie-chart-section">
+            <p class="pie-chart-text">{{ 'FINANCIAL_SUCCESS_PAGE_TEXT4' | content | async }}</p>
+            <ngx-charts-pie-chart
+            [results]="pieChartData"
+            [view]="[850, 400]"
+            [legend]="true"
+            [scheme]="colorScheme"
+            [doughnut]= true
+            >
+            </ngx-charts-pie-chart>
+    </div>
+</div>
